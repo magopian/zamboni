@@ -43,7 +43,7 @@ if you're running a recent version, you can `install them automatically
     sudo aptitude install python-dev python-virtualenv libxml2-dev libxslt1-dev libmysqlclient-dev libmemcached-dev libssl-dev swig openssl
 
 On versions 12.04 and later, you will need to install a patched version of
-M2Crypto instead of the version from PyPI.::
+M2Crypto instead of the version from PyPI::
 
     pip install git+git://github.com/ametaireau/M2Crypto.git
 
@@ -152,6 +152,17 @@ Finish the install
 From inside your activated virtualenv, install the required python packages::
 
     pip install --no-deps -r requirements/dev.txt
+
+If you get a compilation error while installing M2Crypto, now is the time to
+use Alexis' fork:
+
+* comment the line starting with ``M2Crypto`` in ``requirements/compiled.txt``
+* install Alexis' fork and rerun the install::
+
+    pip install git+git://github.com/ametaireau/M2Crypto.git
+    pip install --no-deps -r requirements/dev.txt
+
+
 
 .. _example-settings:
 
