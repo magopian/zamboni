@@ -1002,7 +1002,7 @@ def json_upload_detail(request, upload, addon_slug=None):
             plat_exclude = set(s) - set(supported_platforms)
             plat_exclude = [str(p) for p in plat_exclude]
 
-    result['platforms_to_exclude'] = plat_exclude
+    #result['platforms_to_exclude'] = plat_exclude
     return result
 
 
